@@ -1,7 +1,17 @@
+import java.util.Scanner;
 public class xyz 
 {
     public static void main(String args[])
     { 
+        Scanner ty=new Scanner(System.in);
+        System.out.println("Enter length of array");
+        int n=ty.nextInt();
+        int x=new int[n];
+        System.out.println("Enter elements of array");
+        for(int i=0;i<=n;i++)
+        {
+            x[i]=ty.nextInt();
+        }
         public static void haveThree(int x[])
         {    
            int count=0;
