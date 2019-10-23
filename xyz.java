@@ -12,7 +12,10 @@ public class xyz
         {
             x[i]=ty.nextInt();
         }
-        public static void haveThree(int x[]) // question
+    }
+   
+    
+    public static void haveThree(int x[]) // question
         {    
            int count=0;
            for(int i=0;i<=x.length;i++)
@@ -38,8 +41,6 @@ public class xyz
            System.out.println("True");
             }
         }
-     
-    }
  }
    
 
