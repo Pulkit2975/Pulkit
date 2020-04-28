@@ -1,0 +1,55 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+ 
+#define INF 9999999
+#define V 5
+  
+int t[V][V] = {
+  {10, 91, 5, 0, 1},
+  {9, 1, 9, 19, 43},
+  {7, 5, 0, 51, 0},
+  {1, 7, 8, 0, 26,
+  {4, 2, 5, 1, 0}
+};
+ 
+int main ()
+ {
+  int no_edge;           
+  int selected[V];
+  memset (selected, false, sizeof (selected));
+  no_edge = 0;
+  selected[0] = true; 
+  int x;            
+  int y;           
+
+  cout << "The Edge is" << " : " << "The Weight is";
+  cout << endl;
+  while (no_edge < V - 1) 
+{
+
+      int min = INF;
+      x = 0;
+      y = 0;
+ 
+      for (int i = 0; i < V; i++) {
+        if (selected[i]) {
+            for (int j = 0; j < V; j++) {
+              if (!selected[j] && t[i][j]) { 
+                  if (min > t[i][j]) {
+                      min = t[i][j];
+                      x = i;
+                      y = j;
+                  }
+     
+              }
+          }
+        }
+      }
+      cout << x <<  " - " << y << " :  " << t[x][y];
+      selected[y] = true;
+      no_edge++;
+    }
+ 
+  return 0;
+}
